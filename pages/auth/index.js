@@ -14,13 +14,13 @@ Page({
       // 3 发送请求，获取用户的token值
       // const { token } = await request({ url: "users/wxlogin", data: loginParams, method: "post" });
       // 因为没有企业账号，先自己设置一个tiken
-      const token = "qwertyuiop123456";
+      const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE1NjQ3MzAwNzksImV4cCI6MTAwMTU2NDczMDA3OH0.YPt-XeLnjV-_1ITaXGY2FhxmCe4NvXuRnRB8OMCfnPo";
       // 4 把token存入缓存中，同时跳转回上一个页面
-      wx.getStorageSync('token', token);
+      wx.setStorageSync('token', token);
       wx.navigateBack({
         delta: 1
       })
-      console.log(token);
+      // console.log(token);
     } catch (error) {
       console.log(error);
     }

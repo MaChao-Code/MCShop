@@ -72,7 +72,7 @@ Page({
     const total = res.total;
     // 计算总页数
     this.totalPages = Math.ceil(total / this.QueryParams.pagesize);
-    console.log(this.totalPages);
+    // console.log(this.totalPages);
     this.setData({
       //拼接了数组
       goodsList: [...this.data.goodsList, ...res.goods]

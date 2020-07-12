@@ -83,11 +83,12 @@ export const showToast = ({ title }) => {
 
 /* 
 * primise形式 login
+*@Param {object} param0 参数
 */
-export const login = ()=> {
+export const login = () => {
   return new Promise((reslove, reject) => {
     wx.login({
-      timeout:10000,
+      timeout: 10000,
       success: (res) => {
         reslove(res);
       },
@@ -95,5 +96,23 @@ export const login = ()=> {
         reject(err);
       }
     })
+  })
+}
+
+/* 
+* primise形式 小程序微信支付
+* @Param {object} pay 参数 支付所必要的参数
+*/
+export const requestPayment = (pay) => {
+  return new Promise((reslove, reject) => {
+    wx.requestPayment({
+      ...pay,
+      success: (result) => {
+        reslove(result)
+      },
+      fail: (err) => {
+        reject(err);
+      }
+    });
   })
 }
