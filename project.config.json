@@ -23,7 +23,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -100,6 +100,27 @@
 					"name": "授权",
 					"pathName": "pages/auth/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "我的",
+					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "个人中心",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "订单查询",
+					"pathName": "pages/order/index",
+					"query": "type=1",
 					"scene": null
 				}
 			]
